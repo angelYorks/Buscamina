@@ -59,6 +59,7 @@ class Tablero(val filas: Int, val columnas: Int, val numeroMinas: Int ) {
         val celda = tablero[fila][columna]
 
         if (celda.descubierto) return false
+        if (celda.marcado) return false
 
         celda.descubierto = true
         Log.d("Mensaje", "Revelando celda: ($fila, $columna)")
@@ -82,6 +83,18 @@ class Tablero(val filas: Int, val columnas: Int, val numeroMinas: Int ) {
         }
 
         return true
+    }
+
+    fun contarCeldasMarcadas(): Int {
+        var contador = 0
+        for (fila in 0 until filas) {
+            for(columna in 0 until columnas){
+                if(tablero[fila][columna].marcado)
+                    contador++
+            }
+        }
+        return contador
+
     }
 
     fun celdasReveladas():Int{

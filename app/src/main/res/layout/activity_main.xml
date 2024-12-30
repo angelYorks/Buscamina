@@ -27,6 +27,7 @@
         android:layout_height="0dp"
         android:columnCount="8"
         android:rowCount="8"
+        android:layout_gravity="center"
         android:layout_marginHorizontal="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
