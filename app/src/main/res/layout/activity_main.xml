@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".interfaz.MainActivity">
+
+    <!-- Texto para mostrar las minas restantes -->
+    <TextView
+        android:id="@+id/minasRestantes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Minas restantes: 10"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Tablero del juego -->
+    <GridLayout
+        android:id="@+id/tableroGrid"
+        android:foregroundGravity="center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="8"
+        android:rowCount="8"
+        android:layout_marginHorizontal="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/minasRestantes"
+        app:layout_constraintBottom_toTopOf="@id/reiniciarButton" />
+
+    <!-- Botón para reiniciar el juego -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/reiniciarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Reiniciar Juego"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
