@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado: mina -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#D1C4E9" /> <!-- Color púrpura claro -->
+        </shape>
+    </item>
+
+    <!-- Estado: descubierto pero no mina -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#B2EBF2" /> <!-- Color azul claro -->
+        </shape>
+    </item>
+
+    <!-- Estado: normal -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#E0F7FA" />
+        </shape>
+    </item>
+</selector>

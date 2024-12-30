@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8F9FA"
     tools:context=".interfaz.MainActivity">
 
     <!-- Texto para mostrar las minas restantes -->
@@ -13,8 +14,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:background="#FFCCBC"
         android:text="Minas restantes: 10"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textColor="#37474F"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,13 +27,16 @@
     <!-- Tablero del juego -->
     <GridLayout
         android:id="@+id/tableroGrid"
-        android:foregroundGravity="center"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:columnCount="8"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:columnCount="14"
         android:rowCount="8"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="18dp"
+        android:padding="0dp"
+        android:layout_marginVertical="16dp"
+        android:layout_marginHorizontal="35dp"
+        android:clipToPadding="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/minasRestantes"
@@ -40,8 +48,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:backgroundTint="#00796B"
         android:text="Reiniciar Juego"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
